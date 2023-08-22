@@ -5,9 +5,7 @@ class WordGameService {
     this.axios = httpService.axiosInstance;
   }
   verify = async (word) => {
-    const response = await this.axios.post(`/word/?word=${word}`);
-    console.log("Does this print?");
-    console.log(response.data);
+    const response = await this.axios.post(`/word/${word}`);
     return response.data;
   };
 }

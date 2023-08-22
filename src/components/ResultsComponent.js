@@ -6,16 +6,12 @@ export const ResultsComponent = ({
 }) => {
   if (isValid) {
     return (
-      <div>
+      <div className="score">
         Your word has {uniqueLetters} unique letters and {isPalindrome}. Your
-        score is {score}
+        score is: {score}!
       </div>
     );
   } else {
-    return (
-      <div>
-        <h1>Word is invalid try again</h1>
-      </div>
-    );
+    return <div style={{ color: "red" }}>*Word is invalid try again</div>;
   }
 };
